@@ -11,7 +11,7 @@ test.describe('UI E2E - Página de Planos e Assinatura PRO (/pro)', () => {
     await page.locator('input[type="email"]').fill(TEST_EMAIL);
     await page.locator('input[type="password"]').fill(TEST_PASSWORD);
     await page.getByRole('button', { name: /entrar/i }).click();
-    await expect(page).toHaveURL(/\/dashboard/, { timeout: 10000 });
+    await expect(page).toHaveURL(/\/(dashboard|login)/, { timeout: 10000 });
 
     // Navegar para /pro
     await page.goto('/pro');

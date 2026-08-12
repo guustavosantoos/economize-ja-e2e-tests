@@ -15,7 +15,7 @@ test.describe('API REST - Dashboard & Resumos (/api/v1/dashboard)', () => {
 
     expect(response.status()).toBe(200);
     const body = await response.json();
-    expect(body.data).toHaveProperty('balance');
+    expect(body.data).toHaveProperty('currentBalance');
     expect(body.data).toHaveProperty('totalIncome');
     expect(body.data).toHaveProperty('totalExpense');
   });
