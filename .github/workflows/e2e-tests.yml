@@ -34,7 +34,7 @@ jobs:
       - name: Execute Playwright Automated Tests
         run: npx playwright test --project=chromium
         env:
-          BASE_URL: 'https://economize-ja.up.railway.app'
+          BASE_URL: 'https://economize-ja-production.up.railway.app'
           API_BASE_URL: 'https://api-production-4879.up.railway.app'
 
       - name: Generate GitHub Job Summary Markdown Report
@@ -45,7 +45,7 @@ jobs:
           echo "| Métrica | Valor |" >> $GITHUB_STEP_SUMMARY
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
           echo "| **Status da Suite** | ${{ job.status == 'success' && '✅ APROVADO' || '❌ FALHOU' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| **Ambiente Web** | https://economize-ja.up.railway.app |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Ambiente Web** | https://economize-ja-production.up.railway.app |" >> $GITHUB_STEP_SUMMARY
           echo "| **Ambiente API** | https://api-production-4879.up.railway.app |" >> $GITHUB_STEP_SUMMARY
           echo "| **Executor** | GitHub Actions (${{ github.actor }}) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY

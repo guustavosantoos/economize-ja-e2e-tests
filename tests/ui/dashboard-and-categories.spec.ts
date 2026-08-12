@@ -7,8 +7,8 @@ test.describe('UI E2E - Dashboard e Gerenciador de Categorias', () => {
     // Se redirecionado para login ou carregado
     const currentUrl = page.url();
     if (currentUrl.includes('/login')) {
-      await page.locator('input[type="email"]').fill('teste@economizeja.com');
-      await page.locator('input[type="password"]').fill('123456');
+      await page.locator('input[type="email"]').fill('e2e_automation@economizeja.com');
+      await page.locator('input[type="password"]').fill('SenhaSegura@123');
       await page.getByRole('button', { name: /entrar/i }).click();
     }
 
